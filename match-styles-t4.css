@@ -1,0 +1,1433 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Webfont: CaslonAntique */
+@font-face {
+  font-family: "CaslonAntique";
+  src: url("CaslonAntique.eot"); /* IE9 Compat Modes */
+  src: url("CaslonAntique.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("CaslonAntique.woff") format("woff"),
+    /* Modern Browsers */ url("CaslonAntique.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("CaslonAntique.svg#CaslonAntique")
+      format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  padding-left: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    margin-top: 10%;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: initial;
+  }
+}
+
+.match-day__header {
+  height: auto;
+  background-image: url("http://blogs.evms.edu/emagazine/match_day/flags-background-1085px.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.match-day__title {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "CaslonAntique", Georgia;
+  color: #b02318;
+  padding-top: 25vh;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .match-day__title {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 900px) {
+  .match-day__title {
+    font-size: 130px;
+  }
+}
+
+.match-day__year {
+  color: #1e2d65;
+}
+
+.match-day__pin {
+  background-image: url("https://www.evms.edu/uploads/magazine/11-3/images/MatchDay/Map_marker_white.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: red;
+  width: 7px;
+  height: 50px;
+  z-index: 100;
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .match-day__pin {
+    width: 0.85vw;
+  }
+}
+
+/* map pins */
+@media (min-width: 900px) {
+  .match-day__alabama {
+    top: 68%;
+    left: 69%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__arizona {
+    top: 50%;
+    left: 21%;
+    /* background-color: green; */
+  }
+
+  .match-day__california {
+    top: 30%;
+    left: 8%;
+    /* background-color: brown; */
+  }
+
+  .match-day__florida {
+    top: 53%;
+    left: 80%;
+    /* background-color: darkblue; */
+  }
+
+  .match-day__georgia {
+    top: 32%;
+    left: 76%;
+    /* background-color: deeppink; */
+  }
+
+  .match-day__illinois {
+    top: -2%;
+    left: 63%;
+    /* background-color: maroon; */
+  }
+
+  .match-day__indiana {
+    top: -10%;
+    left: 69%;
+    /* background-color: mediumorchid; */
+  }
+
+  .match-day__kansas {
+    top: -13%;
+    left: 47%;
+    /* background-color: black; */
+  }
+
+  .match-day__louisiana {
+    top: 6%;
+    left: 58%;
+    /* background-color: chartreuse; */
+  }
+
+  .match-day__massachussettes {
+    top: -53%;
+    left: 92%;
+    /* background-color: crimson; */
+  }
+
+  .match-day__maryland {
+    top: -47%;
+    left: 85%;
+    /* background-color: cyan; */
+  }
+
+  .match-day__maine {
+    top: -81%;
+    left: 94%;
+    /* background-color: darkgreen; */
+  }
+
+  .match-day__michigan {
+    top: -72%;
+    left: 70%;
+    /* background-color: darkmagenta; */
+  }
+
+  .match-day__minnesota {
+    top: -88%;
+    left: 54%;
+    /* background-color: darkorange; */
+  }
+
+  .match-day__missouri {
+    top: -70%;
+    left: 58%;
+    /* background-color: deepskyblue; */
+  }
+
+  .match-day__northCarolina {
+    top: -74%;
+    left: 83%;
+    /* background-color: firebrick; */
+  }
+
+  .match-day__newJersey {
+    top: -101%;
+    left: 89%;
+    /* background-color: fuchsia; */
+  }
+
+  .match-day__newYork {
+    top: -119%;
+    left: 86%;
+    /* background-color: gold; */
+  }
+
+  .match-day__ohio {
+    top: -113%;
+    left: 74%;
+    /* background-color: red; */
+  }
+
+  .match-day__oregon {
+    top: -141%;
+    left: 10%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__pennsylvania {
+    top: -135%;
+    left: 83%;
+    /* background-color: hotpink; */
+  }
+
+  .match-day__rhodeIsland {
+    top: -151%;
+    left: 93%;
+    /* background-color: indigo; */
+  }
+
+  .match-day__southCarolina {
+    top: -125%;
+    left: 80%;
+    /* background-color: lightcoral; */
+  }
+
+  .match-day__tennessee {
+    top: -138%;
+    left: 69%;
+    /* background-color: lightseagreen; */
+  }
+
+  .match-day__texas {
+    top: -127%;
+    left: 46%;
+    /* background-color: black; */
+  }
+
+  .match-day__utah {
+    top: -170%;
+    left: 23%;
+    /* background-color: aqua; */
+  }
+
+  .match-day__virginia {
+    top: -173%;
+    left: 83%;
+    /* background-color: blue; */
+  }
+
+  .match-day__washington {
+    top: -220%;
+    left: 12%;
+    /* background-color: brown; */
+  }
+
+  .match-day__d-c {
+    top: -195%;
+    left: 84%;
+    /* background-color: cornflowerblue; */
+  }
+
+  .match-day__westVirginia {
+    top: -114%;
+    left: 78%;
+    /* background-color: purple; */
+  }
+}
+
+@media (min-width: 1400px) {
+  .match-day__alabama {
+    top: 68%;
+    left: 69%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__arizona {
+    top: 53%;
+    left: 21%;
+    /* background-color: green; */
+  }
+
+  .match-day__california {
+    top: 36%;
+    left: 8%;
+    /* background-color: brown; */
+  }
+
+  .match-day__florida {
+    top: 66%;
+    left: 80%;
+    /* background-color: darkblue; */
+  }
+
+  .match-day__georgia {
+    top: 47%;
+    left: 76%;
+    /* background-color: deeppink; */
+  }
+
+  .match-day__illinois {
+    top: 14%;
+    left: 63%;
+    /* background-color: maroon; */
+  }
+
+  .match-day__indiana {
+    top: 10%;
+    left: 69%;
+    /* background-color: mediumorchid; */
+  }
+
+  .match-day__kansas {
+    top: 9%;
+    left: 47%;
+    /* background-color: black; */
+  }
+
+  .match-day__louisiana {
+    top: 32%;
+    left: 58%;
+    /* background-color: chartreuse; */
+  }
+
+  .match-day__massachussettes {
+    top: -24%;
+    left: 92%;
+    /* background-color: crimson; */
+  }
+
+  .match-day__maryland {
+    top: -16%;
+    left: 85%;
+    /* background-color: cyan; */
+  }
+
+  .match-day__maine {
+    top: -46%;
+    left: 94%;
+    /* background-color: darkgreen; */
+  }
+
+  .match-day__michigan {
+    top: -36%;
+    left: 71%;
+    /* background-color: darkmagenta; */
+  }
+
+  .match-day__minnesota {
+    top: -51%;
+    left: 54%;
+    /* background-color: darkorange; */
+  }
+
+  .match-day__missouri {
+    top: -13%;
+    left: 58%;
+    /* background-color: deepskyblue; */
+  }
+
+  .match-day__northCarolina {
+    top: -28%;
+    left: 83%;
+    /* background-color: firebrick; */
+  }
+
+  .match-day__newJersey {
+    top: -52%;
+    left: 89%;
+    /* background-color: fuchsia; */
+  }
+
+  .match-day__newYork {
+    top: -68%;
+    left: 86%;
+    /* background-color: gold; */
+  }
+
+  .match-day__ohio {
+    top: -60%;
+    /* background-color: red; */
+  }
+
+  .match-day__oregon {
+    top: -85%;
+    left: 10%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__pennsylvania {
+    top: -75%;
+    left: 83%;
+    /* background-color: hotpink; */
+  }
+
+  .match-day__rhodeIsland {
+    top: -89%;
+    left: 93%;
+    /* background-color: indigo; */
+  }
+
+  .match-day__southCarolina {
+    top: -59%;
+    left: 80%;
+    /* background-color: lightcoral; */
+  }
+
+  .match-day__tennessee {
+    top: -70%;
+    left: 69%;
+    /* background-color: lightseagreen; */
+  }
+
+  .match-day__texas {
+    top: -52%;
+    /* background-color: black; */
+  }
+
+  .match-day__utah {
+    top: -95%;
+    left: 23%;
+    /* background-color: aqua; */
+  }
+
+  .match-day__virginia {
+    top: -97%;
+    left: 83%;
+    /* background-color: blue; */
+  }
+
+  .match-day__washington {
+    top: -142%;
+    left: 12%;
+    /* background-color: brown; */
+  }
+
+  .match-day__d-c {
+    top: -113%;
+    left: 84%;
+    /* background-color: cornflowerblue; */
+  }
+
+  .match-day__westVirginia {
+    top: -114%;
+    left: 78%;
+    /* background-color: purple; */
+  }
+}
+
+@media (min-width: 1800px) {
+  .match-day__alabama {
+    top: 68%;
+    left: 64%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__arizona {
+    top: 53%;
+    left: 21%;
+    /* background-color: green; */
+  }
+
+  .match-day__california {
+    top: 36%;
+    left: 8%;
+    /* background-color: brown; */
+  }
+
+  .match-day__florida {
+    top: 68%;
+    left: 80%;
+    /* background-color: darkblue; */
+  }
+
+  .match-day__georgia {
+    top: 48%;
+    left: 75%;
+    /* background-color: deeppink; */
+  }
+
+  .match-day__illinois {
+    top: 17%;
+    left: 63%;
+    /* background-color: maroon; */
+  }
+
+  .match-day__indiana {
+    top: 12%;
+    left: 68%;
+    /* background-color: mediumorchid; */
+  }
+
+  .match-day__kansas {
+    top: 15%;
+    left: 46%;
+    /* background-color: black; */
+  }
+
+  .match-day__louisiana {
+    top: 38%;
+    left: 58%;
+    /* background-color: chartreuse; */
+  }
+
+  .match-day__massachussettes {
+    top: -19%;
+    left: 92%;
+    /* background-color: crimson; */
+  }
+
+  .match-day__maryland {
+    top: -9%;
+    left: 85%;
+    /* background-color: cyan; */
+  }
+
+  .match-day__maine {
+    top: -41%;
+    left: 94%;
+    /* background-color: darkgreen; */
+  }
+
+  .match-day__michigan {
+    top: -30%;
+    left: 70%;
+    /* background-color: darkmagenta; */
+  }
+
+  .match-day__minnesota {
+    top: -44%;
+    left: 54%;
+    /* background-color: darkorange; */
+  }
+
+  .match-day__missouri {
+    top: -15%;
+    left: 57%;
+    /* background-color: deepskyblue; */
+  }
+
+  .match-day__northCarolina {
+    top: -18%;
+    left: 83%;
+    /* background-color: firebrick; */
+  }
+
+  .match-day__newJersey {
+    top: -42%;
+    left: 89%;
+    /* background-color: fuchsia; */
+  }
+
+  .match-day__newYork {
+    top: -58%;
+    left: 86%;
+    /* background-color: gold; */
+  }
+
+  .match-day__ohio {
+    top: -49%;
+    /* background-color: red; */
+  }
+
+  .match-day__oregon {
+    top: -74%;
+    left: 10%;
+    /* background-color: yellow; */
+  }
+
+  .match-day__pennsylvania {
+    top: -63%;
+    left: 82%;
+    /* background-color: hotpink; */
+  }
+
+  .match-day__rhodeIsland {
+    top: -75%;
+    left: 93%;
+    /* background-color: indigo; */
+  }
+
+  .match-day__southCarolina {
+    top: -45%;
+    left: 80%;
+    /* background-color: lightcoral; */
+  }
+
+  .match-day__tennessee {
+    top: -54%;
+    left: 69%;
+    /* background-color: lightseagreen; */
+  }
+
+  .match-day__texas {
+    top: -41%;
+    /* background-color: black; */
+  }
+
+  .match-day__utah {
+    top: -80%;
+    left: 23%;
+    /* background-color: aqua; */
+  }
+
+  .match-day__virginia {
+    top: -80%;
+    left: 83%;
+    /* background-color: blue; */
+  }
+
+  .match-day__washington {
+    top: -124%;
+    left: 12%;
+    /* background-color: brown; */
+  }
+
+  .match-day__d-c {
+    top: -95%;
+    left: 84%;
+    /* background-color: cornflowerblue; */
+  }
+
+  .match-day__westVirginia {
+    top: -96%;
+    left: 78%;
+    /* background-color: purple; */
+  }
+}
+
+/* <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602"/></svg> */
+
+.match-day__map-wrapper {
+  /* max-width: 1600px; */
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .match-day__map-wrapper {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1400px) {
+  .match-day__map-wrapper {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .match-day__map-wrapper {
+    max-width: 1600px;
+  }
+}
+
+.match-day__map-overlay {
+  position: absolute;
+  top: 20px;
+  height: 90%;
+  width: 100%;
+  opacity: 0.5;
+  /* background-color: red; */
+}
+
+.match-day__map {
+  height: 400px;
+  width: 100px;
+  background-color: blue;
+}
+
+.match-day__map__instructions {
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 14%;
+}
+
+.match-day__map__resource {
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 14%;
+  padding-top: 5px;
+}
+
+.match-day__map__resource-link {
+  color: orange;
+  padding-left: 5px;
+}
+
+.match-day__content {
+  max-width: 1440px;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.match-day__content__p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 50px;
+  padding-top: 25px;
+}
+
+.observe-element {
+  visibility: hidden;
+}
+
+.show-element {
+  visibility: visible;
+  animation: slideIn 1s;
+}
+
+.match-day__video-wrapper {
+  position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    margin-top: 87px;
+}
+
+.match-day__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.match-day__stats {
+  padding: 40px 0 10px;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 20px;
+}
+
+.match-day__stats-title {
+  font-weight: 800;
+}
+
+/* color bullet points */
+.match-day__stats__list {
+  list-style: none;
+}
+
+.match-day__stats__list .match-day__stats__list__list-item::before {
+  content: "■";
+  color: orange;
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  margin-left: -10px;
+}
+
+.match-day__stats__list__list-item {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.match-day__image-wrapper {
+  height: 600px;
+  width: 85%;
+  margin: 5% auto;
+}
+
+.match-day__image {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+}
+
+.match-day__match-modal {
+  height: auto;
+  max-width: 400px;
+  background-color: white;
+  display: none;
+  opacity: 1;
+  z-index: 3;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+}
+
+.match-day__match-modal__content {
+  padding: 40px;
+}
+
+.match-day__match-modal__state {
+  font-weight: bold;
+  color: #b02318;
+}
+
+.macth-day__match-modal__college {
+  padding-top: 10px;
+  /* color: #1e2d65;
+  font-weight: 600; */
+}
+.match-day__match-modal__match {
+  padding-top: 10px;
+}
+
+@media (min-width: 900px) {
+  .match-day__match-modal__alabama {
+    top: 70%;
+    left: 52%;
+  }
+
+  .match-day__match-modal__arizona {
+    top: 76%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__california {
+    top: 48%;
+    left: 21%;
+  }
+
+  .match-day__match-modal__colorado {
+    top: 10%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__florida {
+    top: 39%;
+    left: 38%;
+  }
+
+  .match-day__match-modal__georgia {
+    top: 60%;
+    left: 44%;
+  }
+
+  .match-day__match-modal__illinois {
+    top: 57%;
+    left: 26%;
+  }
+
+  .match-day__match-modal__indiana {
+    top: 50%;
+    left: 49%;
+  }
+
+  .match-day__match-modal__kansas {
+    top: 56%;
+    left: 34%;
+  }
+
+  .match-day__match-modal__louisiana {
+    top: 73%;
+    left: 42%;
+  }
+
+  .match-day__match-modal__massachusettes {
+    top: 52%;
+    left: 62%;
+  }
+
+  .match-day__match-modal__maryland {
+    top: 57%;
+    left: 42%;
+  }
+
+  .match-day__match-modal__maine {
+    top: 50%;
+    left: 63%;
+  }
+
+  .match-day__match-modal__michigan {
+    top: 50%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__minnesota {
+    top: 50%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__missouri {
+    top: 56%;
+    left: 41%;
+  }
+
+  .match-day__match-modal__north-carolina {
+    top: 50%;
+    left: 40%;
+  }
+
+  .match-day__match-modal__new-jersey {
+    top: 57%;
+    left: 46%;
+  }
+
+  .match-day__match-modal__new-york {
+    top: 44%;
+    left: 43%;
+  }
+
+  .match-day__match-modal__ohio {
+    top: 48%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__oregon {
+    top: 52%;
+    left: 22%;
+  }
+
+  .match-day__match-modal__pennsylvania {
+    top: 40%;
+    left: 40%;
+  }
+
+  .match-day__match-modal__rhode-island {
+    top: 50%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__south-carolina {
+    top: 46%;
+    left: 45%;
+  }
+
+  .match-day__match-modal__tennessee {
+    top: 64%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__texas {
+    top: 50%;
+    left: 13%;
+  }
+
+  .match-day__match-modal__utah {
+    top: 50%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__virginia {
+    top: 28%;
+    left: 40%;
+  }
+
+  .match-day__match-modal__washington {
+    top: 45%;
+    left: 24%;
+  }
+
+  .match-day__match-modal__d-c {
+    top: 50%;
+    left: 41%;
+  }
+
+  .match-day__match-modal__west-virginia {
+    top: 50%;
+    left: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .match-day__match-modal__alabama {
+    top: 94%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__arizona {
+    top: 76%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__california {
+    top: 48%;
+    left: 12%;
+  }
+
+  .match-day__match-modal__colorado {
+    top: 10%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__florida {
+    top: 67%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__georgia {
+    top: 85%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__illinois {
+    top: 71%;
+    left: 34%;
+  }
+
+  .match-day__match-modal__indiana {
+    top: 66%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__kansas {
+    top: 72%;
+    left: 36%;
+  }
+
+  .match-day__match-modal__louisiana {
+    top: 100%;
+    left: 46%;
+  }
+
+  .match-day__match-modal__massachusettes {
+    top: 60%;
+    left: 74%;
+  }
+
+  .match-day__match-modal__maryland {
+    top: 69%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__maine {
+    top: 50%;
+    left: 75%;
+  }
+
+  .match-day__match-modal__michigan {
+    top: 57%;
+    left: 41%;
+  }
+
+  .match-day__match-modal__minnesota {
+    top: 50%;
+    left: 25%;
+  }
+
+  .match-day__match-modal__missouri {
+    top: 88%;
+    left: 45%;
+  }
+
+  .match-day__match-modal__north-carolina {
+    top: 72%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__new-jersey {
+    top: 66%;
+    left: 60%;
+  }
+
+  .match-day__match-modal__new-york {
+    top: 57%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__ohio {
+    top: 62%;
+    left: 59%;
+  }
+
+  .match-day__match-modal__oregon {
+    top: 56%;
+    left: 15%;
+  }
+
+  .match-day__match-modal__pennsylvania {
+    top: 47%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__rhode-island {
+    top: 58%;
+    left: 69%;
+  }
+
+  .match-day__match-modal__south-carolina {
+    top: 82%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__tennessee {
+    top: 72%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__texas {
+    top: 71%;
+    left: 33%;
+  }
+
+  .match-day__match-modal__utah {
+    top: 66%;
+    left: 17%;
+  }
+
+  .match-day__match-modal__virginia {
+    top: 55%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__washington {
+    top: 45%;
+    left: 16%;
+  }
+
+  .match-day__match-modal__d-c {
+    top: 61%;
+    left: 54%;
+  }
+
+  .match-day__match-modal__west-virginia {
+    top: 65%;
+    left: 65%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .match-day__match-modal__alabama {
+    top: 49%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__arizona {
+    top: 36%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__california {
+    top: -25%;
+    left: 18%;
+  }
+
+  .match-day__match-modal__colorado {
+    top: -30%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__florida {
+    top: 27%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__georgia {
+    top: 42%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__illinois {
+    top: 31%;
+    left: 38%;
+  }
+
+  .match-day__match-modal__indiana {
+    top: 22%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__kansas {
+    top: 32%;
+    left: 36%;
+  }
+
+  .match-day__match-modal__louisiana {
+    top: 60%;
+    left: 46%;
+  }
+
+  .match-day__match-modal__massachusettes {
+    top: 20%;
+    left: 72%;
+  }
+
+  .match-day__match-modal__maryland {
+    top: 29%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__maine {
+    top: 10%;
+    left: 73%;
+  }
+
+  .match-day__match-modal__michigan {
+    top: 17%;
+    left: 41%;
+  }
+
+  .match-day__match-modal__minnesota {
+    top: 10%;
+    left: 31%;
+  }
+
+  .match-day__match-modal__missouri {
+    top: 35%;
+    left: 45%;
+  }
+
+  .match-day__match-modal__north-carolina {
+    top: 32%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__new-jersey {
+    top: 26%;
+    left: 60%;
+  }
+
+  .match-day__match-modal__new-york {
+    top: 17%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__ohio {
+    top: 22%;
+    left: 59%;
+  }
+
+  .match-day__match-modal__oregon {
+    top: -24%;
+    left: 19%;
+  }
+
+  .match-day__match-modal__pennsylvania {
+    top: 7%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__rhode-island {
+    top: 18%;
+    left: 69%;
+  }
+
+  .match-day__match-modal__south-carolina {
+    top: 42%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__tennessee {
+    top: 32%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__texas {
+    top: 28%;
+    left: 33%;
+  }
+
+  .match-day__match-modal__utah {
+    top: 26%;
+    left: 17%;
+  }
+
+  .match-day__match-modal__virginia {
+    top: 15%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__washington {
+    top: 5%;
+    left: 22%;
+  }
+
+  .match-day__match-modal__d-c {
+    top: 21%;
+    left: 54%;
+  }
+
+  .match-day__match-modal__west-virginia {
+    top: 22%;
+    left: 65%;
+  }
+}
+
+@media (min-width: 2200px) {
+  .match-day__match-modal__alabama {
+    top: 80%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__arizona {
+    top: 72%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__california {
+    top: 48%;
+    left: 25%;
+  }
+
+  .match-day__match-modal__colorado {
+    top: 10%;
+    left: 30%;
+  }
+
+  .match-day__match-modal__florida {
+    top: 67%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__georgia {
+    top: 75%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__illinois {
+    top: 71%;
+    left: 38%;
+  }
+
+  .match-day__match-modal__indiana {
+    top: 55%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__kansas {
+    top: 62%;
+    left: 39%;
+  }
+
+  .match-day__match-modal__louisiana {
+    top: 90%;
+    left: 46%;
+  }
+
+  .match-day__match-modal__massachusettes {
+    top: 60%;
+    left: 67%;
+  }
+
+  .match-day__match-modal__maryland {
+    top: 69%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__maine {
+    top: 50%;
+    left: 68%;
+  }
+
+  .match-day__match-modal__michigan {
+    top: 57%;
+    left: 41%;
+  }
+
+  .match-day__match-modal__minnesota {
+    top: 50%;
+    left: 31%;
+  }
+
+  .match-day__match-modal__missouri {
+    top: 71%;
+    left: 45%;
+  }
+
+  .match-day__match-modal__north-carolina {
+    top: 72%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__new-jersey {
+    top: 66%;
+    left: 60%;
+  }
+
+  .match-day__match-modal__new-york {
+    top: 57%;
+    left: 56%;
+  }
+
+  .match-day__match-modal__ohio {
+    top: 55%;
+    left: 59%;
+  }
+
+  .match-day__match-modal__oregon {
+    top: 56%;
+    left: 25%;
+  }
+
+  .match-day__match-modal__pennsylvania {
+    top: 47%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__rhode-island {
+    top: 58%;
+    left: 65%;
+  }
+
+  .match-day__match-modal__south-carolina {
+    top: 82%;
+    left: 50%;
+  }
+
+  .match-day__match-modal__tennessee {
+    top: 68%;
+    left: 55%;
+  }
+
+  .match-day__match-modal__texas {
+    top: 61%;
+    left: 38%;
+  }
+
+  .match-day__match-modal__utah {
+    top: 58%;
+    left: 23%;
+  }
+
+  .match-day__match-modal__virginia {
+    top: 55%;
+    left: 53%;
+  }
+
+  .match-day__match-modal__washington {
+    top: 45%;
+    left: 25%;
+  }
+
+  .match-day__match-modal__d-c {
+    top: 61%;
+    left: 54%;
+  }
+
+  .match-day__match-modal__west-virginia {
+    top: 56%;
+    left: 65%;
+  }
+}
